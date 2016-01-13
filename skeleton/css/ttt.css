@@ -10,6 +10,7 @@ html, body, h1, figure, ul, li {
   color: inherit;
 
   background: transparent;
+  font-family: fantasy;
 }
 
 ul {
@@ -25,7 +26,7 @@ ul {
 h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 50px;
   padding: 20px;
 }
 
@@ -35,9 +36,30 @@ h1 {
   margin: auto;
 }
 
+.ttt li.clicked {
+  background: lightblue;
+}
+
 .ttt li {
   border: 1px solid blue;
   float: left;
   width: 100px;
   height: 100px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  background: pink;
+  line-height: 100px;
+}
+
+.ttt li:hover {
+  background: red;
+}
+
+body > p {
+  font-weight: bold;
+  font-size: 100px;
+  font-family: fantasy;
+  text-align: center;
+  line-height: 1px;
 }

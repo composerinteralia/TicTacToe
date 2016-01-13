@@ -1,3 +1,5 @@
+var MoveError = require("../../ttt-core-solution/moveError");
+
 var View = function (game, $el) {
   this.game = game;
   this.$el = $el;
@@ -5,16 +7,13 @@ var View = function (game, $el) {
 
 View.prototype.bindEvents = function () {
   this.$el.on("click", "li", function (e) {
-    var $li = $(e.currentTarget);
-    $li.toggleClass("clicked");
-    this.makeMove($li);
+    this.makeMove($(e.currentTarget));
   }.bind(this));
 };
 
 View.prototype.makeMove = function ($square) {
 
   var $allTiles = $square.parent().children();
-
   var posIdx = $allTiles.index($square);
 
   var PositionsMap = {
@@ -29,8 +28,29 @@ View.prototype.makeMove = function ($square) {
     8: [2, 2]
   };
 
-  this.game.playMove(PositionsMap[posIdx]);
-  // console.log(this.game.board.print());
+  if ($square.hasClass("clicked")) {
+    console.log("spot taken");
+  } else {
+    $square.addClass("clicked");
+    $square.append(this.game.currentPlayer);
+    this.game.playMove(PositionsMap[posIdx]);
+  }
+
+  if (this.game.isOver()) {
+    var winner = this.game.board.winner();
+
+    var $message = $("<p></p>");
+
+    if (winner) {
+      $message.append(winner).append(" wins!");
+    } else {
+      $message.append("It's a draw!");
+    }
+    $('body').append($message);
+
+    $('.ttt').off('click');
+  }
+
 };
 
 View.prototype.setupBoard = function () {
