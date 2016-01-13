@@ -34,7 +34,7 @@ Board.prototype.isEmptyPos = function (pos) {
 };
 
 Board.prototype.isOver = function () {
-  if (this.winner() != null) {
+  if (this.winner() !== null) {
     return true;
   }
 
@@ -90,7 +90,7 @@ Board.prototype.winner = function () {
 
   for (var i = 0; i < posSeqs.length; i++) {
     var winner = this.winnerHelper(posSeqs[i]);
-    if (winner != null) {
+    if (winner !== null) {
       return winner;
     }
   }

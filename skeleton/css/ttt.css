@@ -1,0 +1,43 @@
+/* RESET */
+
+html, body, h1, figure, ul, li {
+  border: 0;
+  padding: 0;
+  margin: 0;
+
+  font: inherit;
+  text-align: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.ttt ul {
+  border: 1px solid black;
+  width: 306px;
+  margin: auto;
+}
+
+.ttt li {
+  border: 1px solid blue;
+  float: left;
+  width: 100px;
+  height: 100px;
+}

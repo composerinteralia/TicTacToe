@@ -19,7 +19,7 @@ Game.prototype.promptMove = function (reader, callback) {
   var game = this;
 
   this.board.print();
-  console.log("Current Turn: " + this.currentPlayer)
+  console.log("Current Turn: " + this.currentPlayer);
 
   reader.question("Enter rowIdx: ", function (rowIdxStr) {
     var rowIdx = parseInt(rowIdxStr);
