@@ -61,10 +61,13 @@ h1 {
   border-radius: 10%;
   margin: 4px;
   box-shadow: 3px 3px 15px black;
+  transition: transform .5s;
 }
 
 .ttt li:hover {
   transform: translate(2px, 2px);
+  transition: transform .2s;
+  trans
   box-shadow: 2px 2px 10px black;
 }
 
