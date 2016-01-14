@@ -126,12 +126,15 @@
 	    $('*').css({"color": this.randomColor})
 	  }.bind(this), 150)
 	
+	    // $('li').css({"transform": "rotate(" + Math.random() * 360 + "deg)"})
+	
 	  window.setInterval(function () {
 	    $('li').css({
 	      "background": this.randomColor,
 	      "border-color": this.randomColor,
 	      "cursor": "default",
-	      "transform": "none"
+	      "transform": "rotate(" + 1765 + "deg)",
+	      "transition": "transform " + 5 + "s"
 	    })
 	  }.bind(this), 125)
 	

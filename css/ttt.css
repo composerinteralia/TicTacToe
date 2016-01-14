@@ -44,10 +44,13 @@ h1 {
 .ttt li.clicked {
   background: lightblue;
   cursor: default;
+  transform: rotate(-4deg);
+  transition: transform .5s;
 }
 
 .ttt li.clicked:hover {
-  transform: none;
+  transform: rotate(3deg) translateY(-5px);
+  transition: transform .2s;
 }
 
 .ttt li {
@@ -67,7 +70,7 @@ h1 {
 .ttt li:hover {
   transform: translate(2px, 2px);
   transition: transform .2s, box-shadow .2s;
-  box-shadow: 1px 1px 13px black;
+  box-shadow: 2px 2px 11px black;
 }
 
 body > p {
