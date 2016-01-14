@@ -67,7 +67,7 @@ h1 {
 .ttt li:hover {
   transform: translate(2px, 2px);
   transition: transform .2s, box-shadow .2s;
-  box-shadow: 1px 1px 15px black;
+  box-shadow: 1px 1px 13px black;
 }
 
 body > p {

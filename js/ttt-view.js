@@ -68,7 +68,12 @@ View.prototype.flash = function () {
   }.bind(this), 150)
 
   window.setInterval(function () {
-    $('li').css({"background": this.randomColor, "border-color": this.randomColor})
+    $('li').css({
+      "background": this.randomColor,
+      "border-color": this.randomColor,
+      "cursor": "default",
+      "transform": "none"
+    })
   }.bind(this), 125)
 
   window.setInterval(function () {
